@@ -34,7 +34,11 @@ This project demonstrates hands on experience in terms of security and monitorin
 ## Scenerio 1: Atomic Red Team & Custom PowerShell Detection Rule
 
 ### Objective: 
-Recreate suspicious PowerShell execution through Atomic Red Team on Windows Server 2022 VM endpoint, collect the 
+Recreate suspicious PowerShell execution through Atomic Red Team on Windows Server 2022 VM endpoint, collect the activity via Sysmon, and develop a custom Wazuh detection rule to identify the behavior. 
+
+### Steps:
+<img width="668" height="566" alt="SIEMDIA2" src="https://github.com/user-attachments/assets/82674a8c-6433-43f9-a63b-bd47441e116a" />
+
 
 
 
