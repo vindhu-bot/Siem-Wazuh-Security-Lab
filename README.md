@@ -17,8 +17,9 @@ This project demonstrates hands on experience in terms of security and monitorin
 
 ## Lab Components 
 ### Virtual Machine 1: Ubuntu server-Wazuh SIEM
-- **Wazuh Manager** SIEM component responsible for receiving and analyzing the security telemetry from the endpoint being monitored(In this case the Windows Server 2022 VM)
+- **Wazuh Manager** is the SIEM component responsible for receiving and analyzing the security telemetry from the endpoint being monitored(In this case the Windows Server 2022 VM)
 - Responsible for collecting data from endpoints and it decodes and matches them against any threat rules that track suspicious activity, vulnerabilities, and any form of anomalies.
+- Essentially the "**Central Control Tower**"
 
 ### Virtual Machine 2: Windows Server 2022(Endpoint being monitored)
 
