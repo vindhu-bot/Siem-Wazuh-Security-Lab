@@ -23,7 +23,7 @@ This project demonstrates hands on experience in terms of security and monitorin
 
 ### Virtual Machine 2: Windows Server 2022(Endpoint being monitored)
 - **Wazuh Agent** - Collects security telemetry from the Windows Server and sends it to the Wazuh Manager.
-- 
+- **Atomic Red Team** - Library of focus security tests to recreate real-world attacker behaviors(allow us to verify whether monitoring tools pickup on this behavior)
 
 
 
