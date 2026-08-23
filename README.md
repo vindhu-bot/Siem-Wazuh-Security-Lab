@@ -31,14 +31,32 @@ This project demonstrates hands on experience in terms of security and monitorin
 - **FreeRDP** - Used to perform a controlled RDP authentication attempt against the Windows Server
 
 
-
-
-
-
-
-
 ## Scenerio 1: Atomic Red Team & Custom PowerShell Detection Rule
 
 ### Objective: 
-Recreate suspicious PowerShell execution through Atomic Red Team on Windows Server 2022 VM 
+Recreate suspicious PowerShell execution through Atomic Red Team on Windows Server 2022 VM endpoint, collect the 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
