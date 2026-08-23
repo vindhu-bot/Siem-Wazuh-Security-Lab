@@ -15,3 +15,23 @@ This project demonstrates hands on experience in terms of security and monitorin
 ## Lab Architecture
 <img width="736" height="565" alt="SIEMDIA" src="https://github.com/user-attachments/assets/5173a034-97fd-425d-a511-6738f47c86bd" />
 
+## Lab Components 
+### Virtual Machine 1: Ubuntu server-Wazuh SIEM
+- **Wazuh Manager** SIEM component responsible for receiving and analyzing the security telemetry from the endpoint being monitored(In this case the Windows Server 2022 VM)
+- Responsible for collecting data from endpoints and it decodes and matches them against any threat rules that track suspicious activity, vulnerabilities, and any form of anomalies.
+
+### Virtual Machine 2: Windows Server 2022(Endpoint being monitored)
+
+
+
+
+
+
+
+
+
+## Scenerio 1: Atomic Red Team & Custom PowerShell Detection Rule
+
+### Objective: 
+Recreate suspicious PowerShell execution through Atomic Red Team on Windows Server 2022 VM 
+
