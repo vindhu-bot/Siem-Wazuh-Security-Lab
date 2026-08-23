@@ -1,4 +1,4 @@
-# Siem-Wazuh-Security-Lab
+# SIEM-Wazuh-Security-Lab
 Wazuh SIEM lab includes: Custom PowerShell detection, running Atomic Red Team simulations, Windows authentication monitoring, and Kali Linux for testing and investigation purposes.
 
 ## LAB Overview 
