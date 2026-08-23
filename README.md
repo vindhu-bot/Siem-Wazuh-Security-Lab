@@ -18,12 +18,12 @@ This project demonstrates hands on experience in terms of security and monitorin
 ## Lab Components 
 ### Virtual Machine 1: Ubuntu server - Wazuh SIEM
 - **Wazuh Manager** is the SIEM component responsible for receiving and analyzing the security telemetry from the endpoint being monitored(In this case the Windows Server 2022 VM)
-- Responsible for collecting data from endpoints and it decodes and matches them against any threat rules that track suspicious activity, vulnerabilities, and any form of anomalies.
+- Responsible for recieving data from endpoints and decoding/matching them against any threat rules that track suspicious activity, vulnerabilities, and any form of anomalies.
 - Essentially the "**Central Control Tower**"
 
 ### Virtual Machine 2: Windows Server 2022(Endpoint being monitored)
 - **Wazuh Agent** - Collects security telemetry from the Windows Server and sends it to the Wazuh Manager.
-- **Atomic Red Team** - Library of focus security tests to recreate real-world attacker behaviors(allows us to verify whether monitoring tools pickup on this behavior)
+- **Atomic Red Team** - Library of focused security tests to recreate real-world attacker behaviors(allows us to verify whether monitoring tools pickup on this behavior)
 - **Sysmon** - Gives detailed Windows system telemetry, eg. process creation/cmd line activity
 
 ### Virtual Machine 3: Kali Linux - Security Testing
