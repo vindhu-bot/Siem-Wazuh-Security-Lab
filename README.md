@@ -22,7 +22,8 @@ This project demonstrates hands on experience in terms of security and monitorin
 - Essentially the "**Central Control Tower**"
 
 ### Virtual Machine 2: Windows Server 2022(Endpoint being monitored)
-
+- **Wazuh Agent** - Collects security telemetry from the Windows Server and sends it to the Wazuh Manager.
+- 
 
 
 
