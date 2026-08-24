@@ -146,6 +146,10 @@ Fig 4. ^ Ran Atomic Red Team test 17 for MITRE ATT&CK T1059.001, generating cont
 
 ### Step 2: Sysmon Event ID 1: Process Creation
 
+- After running the Atomic Red Team PowerShell simulation, Sysmon would generate process creation telemetry on the Windows Server 2022 endpoint.
+- Sysmon event ID records new processes as well as their command line details, which help identify suspicious activity, especially encoded PowerShell execution.
+
+
 
 
 
