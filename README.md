@@ -44,7 +44,7 @@ This project demonstrates hands on experience in terms of security and monitorin
  Fig 1. Successful deployment of the Wazuh SIEM environment on Ubuntu Server.
 
 ### 2. Windows Endpoint Connection
-- Installed the Wazuh agent on the Windows Server 2022 endpoint.
+- I installed the Wazuh agent on the Windows Server 2022 endpoint.
 - After connecting the agent to Wazuh Manager, I had to confirm the Windows endpoint agent was actually reporting to the Wazuh manager(Ubuntu Linux Server VM).
 
 <img width="491" height="280" alt="Wazuh 2" src="https://github.com/user-attachments/assets/678bda04-dffa-413a-b3c1-63c499ffcff0" />
