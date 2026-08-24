@@ -132,7 +132,12 @@ Fig 2. ^ Displayed the MITRE ATT&CK simulations available
 
 Fig 3. ^ Ran Atomic Red Team test 17 for MITRE ATT&CK T1059.001, generating controlled PowerShell activity on the Windows Server 2022 endpoint.
 
-###Step 2: 
+
+
+
+
+### Step 2: Sysmon 
+
 
 
 
