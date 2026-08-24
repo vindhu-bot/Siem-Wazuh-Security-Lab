@@ -47,6 +47,13 @@ This project demonstrates hands on experience in terms of security and monitorin
 - Installed the Wazuh agent on the Windows Server 2022 endpoint.
 - After connecting the agent to Wazuh Manager, I had to confirm the Windows endpoint agent was actually reporting to the Wazuh manager(Ubuntu Linux Server VM).
 
+<img width="491" height="280" alt="Wazuh 2" src="https://github.com/user-attachments/assets/678bda04-dffa-413a-b3c1-63c499ffcff0" />
+
+<img width="491" height="280" alt="Wazuh 2" src="https://github.com/user-attachments/assets/90a6cc16-3e4b-42d5-801d-c97ee274dc82" />
+
+Fig 2. Windows Server 2022 endpoint connected successfully and reports as active to the Wazuh Manager. Name of endpoint is "watcher-goat"
+
+
 
   
 &nbsp; &nbsp; &nbsp;
