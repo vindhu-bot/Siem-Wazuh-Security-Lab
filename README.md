@@ -93,6 +93,9 @@ Fig 3. Sysmon successfully generated endpoint telemetry in the Windows Sysmon Op
 
 Fig 4. This displays the Wazuh Agent configuration we pasted into the **ossec.conf** file to collect the Sysmon Operational channel telemetry from Windows endpoint
 
+
+
+
 &nbsp; &nbsp; &nbsp;
 
 
@@ -102,12 +105,18 @@ Fig 4. This displays the Wazuh Agent configuration we pasted into the **ossec.co
 ## Scenerio 1: Atomic Red Team & Custom PowerShell Detection Rule
 
 ### Objective: 
-Simulate suspicious PowerShell execution through Atomic Red Team on Windows Server 2022 VM endpoint, collect the activity via Sysmon, and develop a custom Wazuh detection rule to identify the behavior. 
+Simulate suspicious PowerShell activity through Atomic Red Team on Windows Server 2022 VM endpoint, collect the activity via Sysmon, and develop a custom Wazuh detection rule to identify the behavior. 
 
 ### Steps:
 <img width="635" height="535" alt="SIEMDIA2" src="https://github.com/user-attachments/assets/e7b3bff2-9065-4868-a0c6-2292ede706e8" />
 
-##Setup 
+##Atomic Red Team Setup
+Atomic Red Team was installed on the Windows Server 2022 endpoint to safely recreate attacker techniques in a controlled lab environment. Then I verified to make sure Atomic Red Team library was successfully installed and ready before actually executing the PowerShell simulation.
+
+<img width="1059" height="278" alt="Wazuh 6" src="https://github.com/user-attachments/assets/6e86dbc7-2248-44a9-a804-8be451b797d9" />
+
+Fig 1. Atomic Red Team successfully installed and confirmed on the Windows Server 2022 endpoint 
+
 
 
 
