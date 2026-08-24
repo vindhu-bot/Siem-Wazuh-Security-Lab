@@ -36,13 +36,19 @@ This project demonstrates hands on experience in terms of security and monitorin
 
 ## Lab Setup and Configuration
  ### 1. Install Wazuh on Ubuntu Server
- I installed the Wazuh SIEM environment on the Ubuntu Server VM. The Wazuh Manager lives here which is responsible for being the central analysis component, it receives security telemetry from the endpoints connected to it and evaluates events based on the detection rules. 
+-  I installed the Wazuh SIEM environment on the Ubuntu Server VM. The Wazuh Manager lives here & it's responsible for being the central analysis component.
+-   It receives security telemetry from the endpoints connected to it and evaluates events based on the detection rules. 
+ 
 <img width="498" height="199" alt="Wazuh Install" src="https://github.com/user-attachments/assets/4236c2ea-67bd-482f-a865-8706a5442009" />
  
- ^^ Successful deployment of the Wazuh SIEM environment on Ubuntu Server.
+ Fig 1. Successful deployment of the Wazuh SIEM environment on Ubuntu Server.
 
-### 2. 
+### 2. Windows Endpoint Connection
+- Installed the Wazuh agent on the Windows Server 2022 endpoint.
+- After connecting the agent to Wazuh Manager, I had to confirm the Windows endpoint agent was actually reporting to the Wazuh manager(Ubuntu Linux Server VM).
 
+
+  
 &nbsp; &nbsp; &nbsp;
 
 ## Scenerio 1: Atomic Red Team & Custom PowerShell Detection Rule
