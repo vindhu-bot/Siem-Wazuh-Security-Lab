@@ -110,7 +110,7 @@ Simulate suspicious PowerShell activity through Atomic Red Team on Windows Serve
 ### Steps:
 <img width="635" height="535" alt="SIEMDIA2" src="https://github.com/user-attachments/assets/e7b3bff2-9065-4868-a0c6-2292ede706e8" />
 
-##Atomic Red Team Setup
+### Atomic Red Team Setup
 Atomic Red Team was installed on the Windows Server 2022 endpoint to safely recreate attacker techniques in a controlled lab environment. Then I verified to make sure Atomic Red Team library was successfully installed and ready before actually executing the PowerShell simulation.
 
 <img width="1059" height="278" alt="Wazuh 6" src="https://github.com/user-attachments/assets/6e86dbc7-2248-44a9-a804-8be451b797d9" />
