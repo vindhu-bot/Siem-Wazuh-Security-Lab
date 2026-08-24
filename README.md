@@ -34,10 +34,14 @@ This project demonstrates hands on experience in terms of security and monitorin
 ## Scenerio 1: Atomic Red Team & Custom PowerShell Detection Rule
 
 ### Objective: 
-Recreate suspicious PowerShell execution through Atomic Red Team on Windows Server 2022 VM endpoint, collect the activity via Sysmon, and develop a custom Wazuh detection rule to identify the behavior. 
+Simulate suspicious PowerShell execution through Atomic Red Team on Windows Server 2022 VM endpoint, collect the activity via Sysmon, and develop a custom Wazuh detection rule to identify the behavior. 
 
 ### Steps:
 <img width="635" height="535" alt="SIEMDIA2" src="https://github.com/user-attachments/assets/e7b3bff2-9065-4868-a0c6-2292ede706e8" />
+
+### Step 1: Attack Simulation
+- Atomic Red team was used on the Windows Server 2022 VM(endpoint) in order to simulate suspicious PowerShell execution in a controlled lab environment.
+- This essentially developed a process activity that can be captured by Sysmon, and the Wazuh agent collects this Sysmon telemetry and forwarded this to the Wazuh Manager for analysis.
 
 
 
