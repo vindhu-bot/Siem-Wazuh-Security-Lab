@@ -5,6 +5,11 @@ Wazuh SIEM lab includes: Custom PowerShell detection, running Atomic Red Team si
 
 This project demonstrates hands on experience in terms of security and monitoring developed with Wazuh running on Ubuntu server, a monitored Windows Server 2022 endpoint with Sysmon installed, Atomic Red Team to run controlled attack simulations, and Kali Linux for security testing purposes.
 
+
+
+
+
+
 ## The lab showcased three different security scenarios: 
 1. **Atomic Red Team & Custom PowerShell Detection Rule** - Ran PowerShell activity and developed a custom Wazuh detection rule based on that with Sysmon telemetry. 
 
@@ -15,7 +20,17 @@ This project demonstrates hands on experience in terms of security and monitorin
 ## Lab Architecture
 <img width="736" height="565" alt="SIEMDIA" src="https://github.com/user-attachments/assets/5173a034-97fd-425d-a511-6738f47c86bd" />
 
+
+
+
+
 &nbsp;&nbsp;&nbsp;&nbsp;
+
+
+
+
+
+
 
 ## Lab Components --> *VMs were deployed on a self-hosted, bare-metal(Esxi) home server
 ### Virtual Machine 1: Ubuntu server - Wazuh SIEM
@@ -31,8 +46,16 @@ This project demonstrates hands on experience in terms of security and monitorin
 ### Virtual Machine 3: Kali Linux - Security Testing
 - **Nmap** - Used for Windows reconnaissance and searching for exposed services on Windows Server
 - **FreeRDP** - Used to perform a controlled RDP authentication attempt against the Windows Server
-  
+
+
+
+
+
 &nbsp;&nbsp;&nbsp;&nbsp;
+
+
+
+
 
 ## Lab Setup and Configuration
  ### 1. Install Wazuh on Ubuntu Server
@@ -51,13 +74,30 @@ This project demonstrates hands on experience in terms of security and monitorin
 
 <img width="1247" height="506" alt="Wazuh 3" src="https://github.com/user-attachments/assets/d6c7c3a2-a0b5-4728-933c-599704d6f7cb" />
 
-
 Fig 2. Windows Server 2022 endpoint connected successfully and reports as active to the Wazuh Manager. Name of endpoint is "watcher-goat"
 
+### 3. Implement Sysmon on Windows Server 2022
+- I installed Sysmon on the Windows Server 2022 endpoint in order to provide detailed endpoint telemetry.
+- Once the installation was complete I made sure the Sysmon was generating events inside the Microsoft Windows Sysmon Operational event log.
+
+<img width="1003" height="567" alt="Wazuh 4" src="https://github.com/user-attachments/assets/7cb064b4-1aeb-4c5f-9b3e-303db67de8c8" />
+
+Fig 3. Sysmon successfully generated endpoint telemetry in the Windows Sysmon Operational event log!
 
 
-  
+### 4. Integrate Sysmon with the Wazuh Agent
+- I configured the Wazuh "**ossec.conf**" file to monitor the "**Microsoft-Windows-Sysmon/Operational**" event channel.
+- This basically lets the Wazuh agent collect the Sysmon telemetry from Windows Server endpoint and send it to the Wazuh Manager on the Ubuntu Server VM to analyze. 
+
+<img width="1117" height="623" alt="Wazuh 5" src="https://github.com/user-attachments/assets/030d588f-4396-44bd-aea9-c7f4881a8fdb" />
+
+Fig 4. This displays the Wazuh Agent configuration we pasted into the **ossec.conf** file to collect the Sysmon Operational channel telemetry from Windows endpoint
+
 &nbsp; &nbsp; &nbsp;
+
+
+
+
 
 ## Scenerio 1: Atomic Red Team & Custom PowerShell Detection Rule
 
