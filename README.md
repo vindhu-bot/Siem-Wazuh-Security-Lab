@@ -144,10 +144,28 @@ Fig 4. ^ Ran Atomic Red Team test 17 for MITRE ATT&CK T1059.001, generating cont
 
 
 
-### Step 2: Sysmon Event ID 1: Process Creation
+### Step 2: Sysmon Event ID 1-Process Creation
 
-- After running the Atomic Red Team PowerShell simulation, Sysmon would generate process creation telemetry on the Windows Server 2022 endpoint.
-- Sysmon event ID records new processes as well as their command line details, which help identify suspicious activity, especially encoded PowerShell execution.
+- After executing Atomic Test 17, Sysmon captured the PowerShell process creation as "Event ID 1" on the Windows Server endpoint. Next event was sent to Wazuh manager(Ubuntu Server) to be analyzed(we will go into more detail next step).
+
+<img width="398" height="392" alt="Wazuh 10" src="https://github.com/user-attachments/assets/d228d4a1-307c-4f9d-8e6b-c9bd00371398" />
+
+ Fig 5. Wazuh displaying Sysmon Event ID 1(Process Creation) for PowerShell activity captured from the Windows Server 2022 endpoint. 
+
+ - ^ Wazuh analyzed the activity and mapped the PowerShell behavior to the MITRE ATT&CK T1059.001(PowerShell) under the Execution tactic
+
+<img width="296" height="58" alt="Wazuh 11" src="https://github.com/user-attachments/assets/1372ed85-4b47-4701-8d34-b7baa9dc078e" />
+
+Fig. 6. ^ Wazuh mapping the detected PowerShell activity to MITRE ATT&CK T1058.001(PowerShell) under the Execution tactic. 
+
+### Step 3: Wazuh Agent --> Wazuh Manager 
+- The Wazuh Agent on the Windows Server 2022 collected that Sysmon telemetry and sent it to the Wazuh Manager on the Ubuntu Server to be analyzed.
+- The Wazuh received the encoded PowerShell command and the source agent information, letting the information be investigated centrally.
+
+<img width="647" height="368" alt="Wazuh 13" src="https://github.com/user-attachments/assets/58513d4e-85f6-4fe3-b195-f3ab1ba7584f" />
+
+Fig 7. Wazuh displaying the encoded Powershell telemetry, which has been collected from the Windows Server 2022 agent(watcher-goat)
+
 
 
 
