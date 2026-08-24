@@ -49,7 +49,8 @@ This project demonstrates hands on experience in terms of security and monitorin
 
 <img width="491" height="280" alt="Wazuh 2" src="https://github.com/user-attachments/assets/678bda04-dffa-413a-b3c1-63c499ffcff0" />
 
-<img width="491" height="280" alt="Wazuh 2" src="https://github.com/user-attachments/assets/90a6cc16-3e4b-42d5-801d-c97ee274dc82" />
+<img width="1247" height="506" alt="Wazuh 3" src="https://github.com/user-attachments/assets/d6c7c3a2-a0b5-4728-933c-599704d6f7cb" />
+
 
 Fig 2. Windows Server 2022 endpoint connected successfully and reports as active to the Wazuh Manager. Name of endpoint is "watcher-goat"
 
