@@ -146,7 +146,7 @@ Fig 4. ^ Ran Atomic Red Team test 17 for MITRE ATT&CK T1059.001, generating cont
 
 ### Step 2: Sysmon Event ID 1-Process Creation
 
-- After executing Atomic Test 17, Sysmon captured the PowerShell process creation as "Event ID 1" on the Windows Server endpoint. Next event was sent to Wazuh manager(Ubuntu Server) to be analyzed(we will go into more detail next step).
+- After executing Atomic Test 17, Sysmon captured the PowerShell process creation as "Event ID 1" on the Windows Server endpoint. The event was sent to Wazuh manager(Ubuntu Server) to be analyzed(we will go into more detail next step).
 
 <img width="398" height="392" alt="Wazuh 10" src="https://github.com/user-attachments/assets/d228d4a1-307c-4f9d-8e6b-c9bd00371398" />
 
