@@ -119,7 +119,7 @@ Fig 1. Atomic Red Team successfully installed and confirmed on the Windows Serve
 
 &nbsp; &nbsp;
 
-### Step 1:  Atomic Red Team --> Encoded PowerShell Execution
+### Step 1:  Atomic Red Team: Encoded PowerShell Execution
 
 - I used Atomic Red team in order to simulate the suspicious PowerShell activity on the Windows endpoint.
 - Specifically I selected Atomic Test 17 under the MITRE ATT&CK technique T1059.001 & This attack showed the encoded PowerShell command. 
@@ -130,10 +130,9 @@ Fig 2. ^ Displayed the MITRE ATT&CK simulations available
 
 <img width="590" height="388" alt="Wazuh 8" src="https://github.com/user-attachments/assets/4dac9e83-f168-4fd0-a004-c037decb8ac0" />
 
-Fig 3. ^ Atomic Red Team test 17 for MITRE ATT&CK T1059.001, displaying the encoded PowerShell command for a controlled security simulation
+Fig 3. ^ Atomic Red Team test 17 for MITRE ATT&CK T1059.001, generating controlled PowerShell activity on the Windows Server 2022 endpoint.
 
-
-
+###Step 2: 
 
 
 
