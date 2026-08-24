@@ -31,7 +31,7 @@ This project demonstrates hands on experience in terms of security and monitorin
 ### Virtual Machine 3: Kali Linux - Security Testing
 - **Nmap** - Used for Windows reconnaissance and searching for exposed services on Windows Server
 - **FreeRDP** - Used to perform a controlled RDP authentication attempt against the Windows Server
-- 
+  
 &nbsp;&nbsp;&nbsp;&nbsp;
 
 ## Lab Setup and Configuration
