@@ -11,9 +11,11 @@ This project demonstrates hands on experience in terms of security and monitorin
 2. **Windows Authentication Monitoring** - Analyzed successful(ID 4624) and failed(ID 4625) Window logins and developed a visualization displaying authentication activity.
 
 3. **Kali Linux Security Testing/Investigation** - Performed network reconnaissance against Windows VM and performed a failed RDP authentication attempt, and then investigated the event through Wazuh.
-
+&nbsp;&nbsp;&nbsp;&nbsp;
 ## Lab Architecture
 <img width="736" height="565" alt="SIEMDIA" src="https://github.com/user-attachments/assets/5173a034-97fd-425d-a511-6738f47c86bd" />
+
+&nbsp;&nbsp;&nbsp;&nbsp;
 
 ## Lab Components --> *VMs were deployed on a self-hosted, bare-metal(Esxi) home server
 ### Virtual Machine 1: Ubuntu server - Wazuh SIEM
@@ -29,6 +31,8 @@ This project demonstrates hands on experience in terms of security and monitorin
 ### Virtual Machine 3: Kali Linux - Security Testing
 - **Nmap** - Used for Windows reconnaissance and searching for exposed services on Windows Server
 - **FreeRDP** - Used to perform a controlled RDP authentication attempt against the Windows Server
+- 
+&nbsp;&nbsp;&nbsp;&nbsp;
 
 ## Lab Setup and Configuration
  ### 1. Install Wazuh on Ubuntu Server
@@ -36,6 +40,7 @@ This project demonstrates hands on experience in terms of security and monitorin
 <img width="498" height="199" alt="Wazuh Install" src="https://github.com/user-attachments/assets/4236c2ea-67bd-482f-a865-8706a5442009" />
 
 &nbsp; &nbsp; &nbsp;
+
 ## Scenerio 1: Atomic Red Team & Custom PowerShell Detection Rule
 
 ### Objective: 
