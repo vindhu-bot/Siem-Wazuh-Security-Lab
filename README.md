@@ -39,7 +39,7 @@ Simulate suspicious PowerShell execution through Atomic Red Team on Windows Serv
 ### Steps:
 <img width="635" height="535" alt="SIEMDIA2" src="https://github.com/user-attachments/assets/e7b3bff2-9065-4868-a0c6-2292ede706e8" />
 
-
+##Setup 
 
 
 
