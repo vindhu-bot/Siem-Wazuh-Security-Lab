@@ -110,12 +110,27 @@ Simulate suspicious PowerShell activity through Atomic Red Team on Windows Serve
 ### Steps:
 <img width="635" height="535" alt="SIEMDIA2" src="https://github.com/user-attachments/assets/e7b3bff2-9065-4868-a0c6-2292ede706e8" />
 
-### Atomic Red Team Setup
+### Atomic Red Team Installation(prep)
 Atomic Red Team was installed on the Windows Server 2022 endpoint to safely recreate attacker techniques in a controlled lab environment. Then I verified to make sure Atomic Red Team library was successfully installed and ready before actually executing the PowerShell simulation.
 
 <img width="1059" height="278" alt="Wazuh 6" src="https://github.com/user-attachments/assets/6e86dbc7-2248-44a9-a804-8be451b797d9" />
 
-Fig 1. Atomic Red Team successfully installed and confirmed on the Windows Server 2022 endpoint 
+Fig 1. Atomic Red Team successfully installed and confirmed on the Windows Server 2022 endpoint, the project **can begin now!**
+
+&nbsp; &nbsp;
+
+### Step 1:  Atomic Red Team --> Encoded PowerShell Execution
+
+- I used Atomic Red team in order to simulate the suspicious PowerShell activity on the Windows endpoint.
+- Specifically I selected Atomic Test 17 under the MITRE ATT&CK technique T1059.001 & This attack showed the encoded PowerShell command. 
+
+<img width="527" height="288" alt="Wazuh 7" src="https://github.com/user-attachments/assets/77e224df-4b61-4b7b-91fe-e34f36bc8f07" />
+
+Fig 2. ^ Displayed the MITRE ATT&CK simulations available 
+
+<img width="590" height="388" alt="Wazuh 8" src="https://github.com/user-attachments/assets/4dac9e83-f168-4fd0-a004-c037decb8ac0" />
+
+Fig 3. ^ Atomic Red Team test 17 for MITRE ATT&CK T1059.001, displaying the encoded PowerShell command for a controlled security simulation
 
 
 
