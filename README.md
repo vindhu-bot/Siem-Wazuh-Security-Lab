@@ -38,6 +38,9 @@ This project demonstrates hands on experience in terms of security and monitorin
  ### 1. Install Wazuh on Ubuntu Server
  I installed the Wazuh SIEM environment on the Ubuntu Server VM. The Wazuh Manager lives here which is responsible for being the central analysis component, it receives security telemetry from the endpoints connected to it and evaluates events based on the detection rules. 
 <img width="498" height="199" alt="Wazuh Install" src="https://github.com/user-attachments/assets/4236c2ea-67bd-482f-a865-8706a5442009" />
+ ^^ Successful deployment of the Wazuh SIEM environment on Ubuntu Server.
+
+### 2. 
 
 &nbsp; &nbsp; &nbsp;
 
