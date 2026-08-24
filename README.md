@@ -164,8 +164,11 @@ Fig. 6. ^ Wazuh mapping the detected PowerShell activity to MITRE ATT&CK T1058.0
 
 <img width="647" height="368" alt="Wazuh 13" src="https://github.com/user-attachments/assets/58513d4e-85f6-4fe3-b195-f3ab1ba7584f" />
 
-Fig 7. Wazuh displaying the encoded Powershell telemetry, which has been collected from the Windows Server 2022 agent(watcher-goat)
+Fig 7. ^ Wazuh displaying the encoded Powershell telemetry, which has been collected from the Windows Server 2022 agent(watcher-goat)
 
+### Step 4: Custom Wazuh Detection Rule
+- Sometimes defualt Wazuh rules flag PowerShell execution too broad
+- The rule rules looks through the collected telemetry for PowerShell behavior and creates a high severity alert when the conditions match.
 
 
 
