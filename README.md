@@ -233,12 +233,34 @@ Fig 2. ^ Wazuh authentication attempt displaying Event ID 2625 which indicates a
 Successfully collected and analyzed Windows authentication events and developed a Wazuh visual comparing failed and successful logins.
 
 
+## Scenario 3: Kali Linux Security Testing & Investigation 
 
+### Objective 
+ Use Kali Linux to perform controlled security testing against the Windows Server 2022 VM, and then investigate the results in Wazuh.
 
+ *I installed Kali Linux on a separate VM for this scenario 
 
+ ### Step 1: Network Reconnaissance with Nmap
+ - I started by using Nmap from the Kali Linux VM to scan the Windows server 2022 endpoint for any exposed services.
+ - The scan identified some open ports, one of which being **TCP 3389(RDP)**, which indicated that the Windows Server 2022 was accepting RDP connections.
 
+<img width="549" height="379" alt="Wazuh 19" src="https://github.com/user-attachments/assets/d7425358-0da9-40af-9ea1-a1a2bee8f7b4" />
 
+Fig 1. ^ Nmap scan from Kali Linux which identified open services on Windows Server 2022 endpoint. One port was 3389 --> RDP on TCP port 3389
 
+*Note I used "-Pn" which means to skip the host discovery(ping) and just asssume the host is online and scan it anyway. This is because if you ping the server it blocks the IMCP due to firewall, and Nmap refuses to scan it. 
+
+### Step 2: Controlled RDP Authentication Attempt
+- After discovering RDP port 3389 was open, I used FreeRDP from Kali to perform a controlled login attempt against the Windows Server 
+- I used the account **LabTestUser** and purposefully generated a filed login attempt so it could be investigated into Wazuh
+
+<img width="309" height="247" alt="Wazuh 20" src="https://github.com/user-attachments/assets/219e2b65-83d5-4823-8ffe-b566302520c7" />
+
+Fig 2. ^ Controlled RDP authentication attempt from Kali Linux against the Windows Server 2022 endpoint with the username "LabTestUser"
+
+### Step 3: Investigate the Authentication Event in Wazuh 
+
+- Wazuh detected failed authentication attempt --> generated a **Logon failure - Unknown user or bas password** alert. 
 
 
 
