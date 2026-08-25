@@ -221,13 +221,16 @@ Fig 1. ^ Wazuh authentication attempt displaying Event ID 2624 which indicates a
 Fig 2. ^ Wazuh authentication attempt displaying Event ID 2625 which indicates a failed login attempt
 
 
+### Step 2: Build Authentication Visualization
 
+- I developed the Wazuh visualization using **Event ID 4624** & **Event ID 4625** in order to compare successful vs failed logins.
 
+- This makes it easy to visualize and monitor unusual patterns such as repeated failed login attempts
 
+<img width="326" height="209" alt="Wazuh 18" src="https://github.com/user-attachments/assets/f35f39c3-9517-480f-a58b-d6723db23226" />
 
-
-
-
+### Result:
+Successfully collected and analyzed Windows authentication events and developed a Wazuh visual comparing failed and successful logins.
 
 
 
