@@ -277,5 +277,16 @@ Fig 4. ^ These details prove that this activity was in fact correlated with the 
 ### Result
 The controlled RDP authentication from the Kali Linux VM was successful as it was captured and investigated through Wazuh. All the details such as IP, username, and login events were all associated with the Kali Linux access(RDP) attempt during the security test. 
 
+## Lab Summary
+This project gave me hands on experience in terms of developing the SIEM environment for the purpose of security monitoring, investigation, and detection. 
 
+This lab gave me practical experience with:
+- SIEM deployment, the components, and endpoint monitoring
+- Analyzing Windows and Sysmon logs
+- Creating custom Wazuh detection rules
+- What MITRE ATT&CKs are
+- Deploying an Atomic Red Team Simulation
+- Nmap network reconnaissance
+- Testing with Kali Linux VM
+- Investigating and correlating security events across several systems 
 
