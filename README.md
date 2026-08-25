@@ -72,7 +72,7 @@ This project demonstrates hands on experience in terms of security and monitorin
 
 <img width="491" height="280" alt="Wazuh 2" src="https://github.com/user-attachments/assets/678bda04-dffa-413a-b3c1-63c499ffcff0" />
 
-<img width="1247" height="506" alt="Wazuh 3" src="https://github.com/user-attachments/assets/d6c7c3a2-a0b5-4728-933c-599704d6f7cb" />
+<img width="1247" height="506" alt="Wazuh 3" src="https://github.com/user-attachments/assets/d6c7c3a2-a0b5-4728-933c-599704d6f7cb" />enerio 
 
 Fig 2. Windows Server 2022 endpoint connected successfully and reports as active to the Wazuh Manager. Name of endpoint is "watcher-goat"
 
@@ -158,6 +158,8 @@ Fig 4. ^ Ran Atomic Red Team test 17 for MITRE ATT&CK T1059.001, generating cont
 
 Fig. 6. ^ Wazuh mapping the detected PowerShell activity to MITRE ATT&CK T1058.001(PowerShell) under the Execution tactic. 
 
+
+
 ### Step 3: Wazuh Agent --> Wazuh Manager 
 - The Wazuh Agent on the Windows Server 2022 collected that Sysmon telemetry and sent it to the Wazuh Manager on the Ubuntu Server to be analyzed.
 - The Wazuh received the encoded PowerShell command and the source agent information, letting the information be investigated centrally.
@@ -166,14 +168,57 @@ Fig. 6. ^ Wazuh mapping the detected PowerShell activity to MITRE ATT&CK T1058.0
 
 Fig 7. ^ Wazuh displaying the encoded Powershell telemetry, which has been collected from the Windows Server 2022 agent(watcher-goat)
 
+
+
 ### Step 4: Custom Wazuh Detection Rule
-- Sometimes defualt Wazuh rules flag PowerShell execution too broad
-- The rule rules looks through the collected telemetry for PowerShell behavior and creates a high severity alert when the conditions match.
+
+- Wazuh already provides detection for PowerShell activity, so I developed my own custom rule "100101" to focus on specific behavior.
+  
+- This custom rule looks for process creation for **powershell.exe -e** which means PowerShell is running an encoded command that isn't immediately readable in plaintext.
+
+- When this pattern is detected, the rule generates a Level 10 alert and maps the activity to MITRE ATT&CK T1059.001(PowerShell). This rule shows how **custom detection logic can be used to prioritize specific suspicious behavior**
+
+  <img width="482" height="152" alt="Wazuh 14" src="https://github.com/user-attachments/assets/882052ac-b184-4364-99cb-1dbe921cf197" />
+
+Fig 8. ^ Custom Wazuh rule 100101 configured to detect **powershell.exe -e** and generate a level 10 alert & map activity to MITRE ATT&CK T1059.001. 
+
+
+### Step 5: Custom rule triggered
+
+- After running the Atomic Red Team PowerShell test, the activity matched the cutom rule 100101.
+  
+- As expected, Wazuh generated the level 10 alert which confirmed that the custom detection rule successfully identified the encoded PowerShell behavior.
+
+<img width="393" height="233" alt="Wazuh 15" src="https://github.com/user-attachments/assets/d82a92ea-1665-4f9d-ba80-e5ce54d6d4f6" />
+
+Fig 9. ^ Atomic Red Team Test 17 was executed on Windows Server 2022 endpoint triggering encoded PowerShell detection.
+
+<img width="591" height="236" alt="Wazuh 16" src="https://github.com/user-attachments/assets/e7619e91-3fca-4231-82e3-12eadd3a7340" />
+
+Fig 10. ^ Wazuh Level 10 alert confirmed the custom rule **100101** detecting PowerShell activity and mapped it to the MITRE ATT&CK.
+
+RESULT: The simulation successfully detected the endpoint telemetry and the custom rule we made **100101** generated that level 10 alert!
 
 
 
 
+## Scenario 2: Windows Authentication Monitoring
 
+### Objective 
+
+Monitor Windows authentication activity in Wazuh and build a visualization comparing successful and failed login attempts  
+
+### Step 1: Verify Windows Authentication Events 
+- Successful logins are recorded as **Event ID 4624** and failed logins as **Event ID 4625**
+- I made sure both authentication events were being collected from the Windows Server 2022 endpoint in Wazuh
+
+<img width="370" height="201" alt="Wazuh 16" src="https://github.com/user-attachments/assets/6c84fad4-6f01-489c-9310-cef2c9f079cd" />
+
+Fig 1. ^ Wazuh authentication attempt displaying Event ID 2624 which indicates a successful login attempt
+
+<img width="338" height="211" alt="Wazuh 17" src="https://github.com/user-attachments/assets/ae7fa42d-b1e1-4aec-b6d7-ef83ad048617" />
+
+Fig 2. ^ Wazuh authentication attempt displaying Event ID 2625 which indicates a failed login attempt
 
 
 
