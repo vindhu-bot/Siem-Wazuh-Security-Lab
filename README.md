@@ -260,8 +260,22 @@ Fig 2. ^ Controlled RDP authentication attempt from Kali Linux against the Windo
 
 ### Step 3: Investigate the Authentication Event in Wazuh 
 
-- Wazuh detected failed authentication attempt --> generated a **Logon failure - Unknown user or bas password** alert. 
+- Wazuh detected failed authentication attempt --> generated a **Logon failure - Unknown user or bas password** alert.
+- I then investigated the event by cross referencing the source IP, username, and Windows Event ID against the activity from the Kali Linux VM.
 
+<img width="694" height="350" alt="Wazuh 21" src="https://github.com/user-attachments/assets/d67bcba0-4fed-4b80-9972-8bc75208062f" />
+
+Fig 3. ^ Wazuh alert generated the failed Windows authentication attempt 
+
+<img width="698" height="357" alt="Wazuh 22" src="https://github.com/user-attachments/assets/fdd21852-acc6-4aff-a0f0-f4a89dca8bab" />
+
+Fig 4. ^ These details prove that this activity was in fact correlated with the Kali Server 
+       - ip address: 10.2.1.63(Kali IP)
+       - targetUsername: LabTestUser(Username we entered in Kali)
+       - eventID: 4625
+
+### Result
+The controlled RDP authentication from the Kali Linux VM was successful as it was captured and investigated through Wazuh. All the details such as IP, username, and login events were all associated with the Kali Linux access(RDP) attempt during the security test. 
 
 
 
